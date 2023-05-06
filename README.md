@@ -40,15 +40,15 @@ To run data extraction and pre-processing from scratch the steps are as follows:
 ### Training, evaluation & pretraining code: 
 Not-applicable for this project as it involves Data Extraction and Processing pipeline 
 
+### Bonus Initiatives:
+- Pyhealth Contribution: I was able to successfully contribute by adding hcpcsevents table in MIMIC4 dataset. Approved PR link https://github.com/sunlabuiuc/PyHealth/pull/134 . File modified **mimic4.py**, function added **parse_hcpcsevents()**
+- Notebook: projectPipeline.ipynb
+
 ### Original Pipeline Enhancement
 - I have successfully added feature for extraction logic for hcpcs events.The data records from MIMIC-IV (https://physionet.org/content/mimiciv/1.0/hosp/hcpcsevents.csv.gz) are extracted and merged with the cohort based on user selection inputs.
 File modified: **preprocessing/hosp_module_preproc/feature_selection_hosp.py** ,Function added  **feature_hcpcs()** on line 31 
-
-### Bonus Initiatives:
-- Pyhealth Contribution: I was able to successfully contribute by adding hcpcsevents table in MIMIC4 dataset. Approved PR link https://github.com/sunlabuiuc/PyHealth/pull/134 . File modified **mimic4.py**, function added **parse_hcpcsevents()**
-
-- Notebook: projectPipeline.ipynb
-
+- I have added the code in projectPipeline.ipynb (between step 4 & 5) to take any disease as input from the user for refining the cohort selection
+- Ablation code added as Step 0 in projectPipeline.ipynb. It takes the user inputs for the existing cohort to be reused. User can then directly go to step 5 by skipping the interim steps.
 
 ### Table of results
 Reproduced the below claims by the original paper
